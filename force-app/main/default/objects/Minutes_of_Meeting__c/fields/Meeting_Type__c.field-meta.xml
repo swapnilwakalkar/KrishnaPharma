@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Meeting_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Meeting Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Call</fullName>
+                <default>false</default>
+                <label>Call</label>
+            </value>
+            <value>
+                <fullName>Google Meet</fullName>
+                <default>false</default>
+                <label>Google Meet</label>
+            </value>
+            <value>
+                <fullName>Microsoft teams</fullName>
+                <default>false</default>
+                <label>Microsoft teams</label>
+            </value>
+            <value>
+                <fullName>zoom</fullName>
+                <default>false</default>
+                <label>zoom</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Inco_Terms__c</name>
+    <picklistValues>
+        <masterLabel>CIP - Carriage and Insurance Paid To (insert place of destination)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CPT - Carriage Paid to (insert place of destination)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DAP - Delivered at Place (insert named place of destination)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DDP - Delivered Duty Paid (Insert place of destination)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DPU - Delivered at Place Unloaded (insert of place of destination)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EXW - Ex Works (insert place of delivery)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FCA - Free Carrier (Insert named place of delivery)</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

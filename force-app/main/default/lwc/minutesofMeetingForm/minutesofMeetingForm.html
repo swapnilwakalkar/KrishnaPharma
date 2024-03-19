@@ -1,0 +1,208 @@
+<template>
+<!-- Modal/Popup Box LWC starts here -->
+        <form>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-modal_medium slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal/Popup Box LWC header here -->
+                <header class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close"  variant="bare-inverse"  class="slds-button slds-button_icon slds-modal__close" title="Close" onclick={handleCancel}>
+                     <span class="slds-assistive-text">Close</span>
+                    </lightning-button-icon>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">New Minutes Of Meeting</h2>
+                </header>
+                <!-- Modal/Popup Box LWC body starts here -->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                
+
+                <lightning-card icon-name="standard:poll" title="Minutes Of Meeting Creating">
+                   
+                        <lightning-layout multiple-rows="true"> 
+                         
+                  
+                        <div class="slds-form-element slds-size_4-of-12" style="margin-bottom:-16px; margin-top:-16px" >
+                          
+
+                               <lightning-record-edit-form object-api-name="Minutes_of_Meeting__c">
+                                <lightning-layout-item size="12" small-device-size="4"  
+                                padding="around-small">
+                                   <lightning-input-field field-name="MOM_Date__c" data-type="date" value={MOM_Date__c} name="MOM_Date__c" onchange={momdathandlechange}>
+                                    </lightning-input-field>
+                                </lightning-layout-item>
+                              </lightning-record-edit-form> 
+                               
+                            </div>
+
+
+                              <div class="slds-form-element slds-size_4-of-12" style="margin-bottom:-16px;margin-top:-16px">
+
+                               <lightning-record-edit-form object-api-name="Minutes_of_Meeting__c">
+                                <lightning-layout-item size="12" small-device-size="4"  
+                                padding="around-small">
+                                   <lightning-input-field field-name="Subject__c" data-type="input-field" value={Subject__c} name="Subject__c" onchange={subjecthandlechange}>
+                                    </lightning-input-field>
+                                </lightning-layout-item>
+                              </lightning-record-edit-form>  
+                            </div>
+
+
+
+                            <div class="slds-form-element slds-size_4-of-12" style="margin-bottom:-16px;margin-top:-16px">
+
+                               <lightning-record-edit-form object-api-name="Minutes_of_Meeting__c">
+                               <lightning-layout-item size="12" small-device-size="4" 
+                                padding="around-small">
+                                   <lightning-input-field field-name="Meeting_Type__c" data-type="input-field" value={Meeting_Type__c} name="Meeting_Type__c" onchange={meetingtypehandlechange}>
+                                    </lightning-input-field>
+                                </lightning-layout-item>
+                              </lightning-record-edit-form>  
+                            </div>
+                         
+                         <div class="slds-form-element slds-size_4-of-12" style="margin-bottom:-16px;margin-top:-16px">
+
+                               <lightning-record-edit-form object-api-name="Minutes_of_Meeting__c">
+                                <lightning-layout-item size="12" small-device-size="4" 
+                                padding="around-small">
+                                   <lightning-input-field field-name="Remarks__c" data-type="input-field" value={Remarks__c} name="Remarks__c" onchange={remarkshandlechange}>
+                                    </lightning-input-field>
+                                </lightning-layout-item>
+                              </lightning-record-edit-form>  
+                            </div>
+
+                            <div class="slds-form-element slds-size_4-of-12" style="margin-bottom:-16px;margin-top:-16px">
+
+                               <lightning-record-edit-form object-api-name="Minutes_of_Meeting__c">
+                                <lightning-layout-item size="12" small-device-size="4" 
+                                padding="around-small">
+                                   <lightning-input-field field-name="Meeting_Notes__c" data-type="input-field" value={Meeting_Notes__c} name="Meeting_Notes__c" onchange={meetingnoteshandlechange}>
+                                    </lightning-input-field>
+                                </lightning-layout-item>
+                              </lightning-record-edit-form>  
+                            </div>
+
+      
+                            
+                        <div class="slds-form-element slds-size_4-of-12" style="margin-bottom:-16px;margin-top:-16px">
+
+                               <lightning-record-edit-form object-api-name="Minutes_of_Meeting__c">
+                               <lightning-layout-item size="12" small-device-size="4" 
+                                padding="around-small">
+                                   <lightning-input-field field-name="Account__c" data-type="input-field" value={Account__c} name="Account__c" onchange={accounthandlechange}>
+                                    </lightning-input-field>
+                                </lightning-layout-item>
+                              </lightning-record-edit-form>  
+                            </div>
+
+                            <div class="slds-form-element slds-size_4-of-12" style="margin-bottom:-16px;margin-top:-16px">
+
+                               <lightning-record-edit-form object-api-name="Minutes_of_Meeting__c">
+                               <lightning-layout-item size="12" small-device-size="4"  
+                                padding="around-small">
+                                   <lightning-input-field field-name="Contact__c" data-type="input-field" value={Contact__c} name="Contact__c" onchange={contacthandlechange}>
+                                    </lightning-input-field>
+                                </lightning-layout-item>
+                              </lightning-record-edit-form>  
+                            </div>
+
+                            <div class="slds-form-element slds-size_4-of-12" style="margin-bottom:-16px;margin-top:-16px">
+                               <lightning-record-edit-form object-api-name="Minutes_of_Meeting__c">
+                                 <lightning-layout-item size="12" small-device-size="4"   
+                                padding="around-small">
+                                   <lightning-input-field field-name="Opportunity__c" data-type="input-field" value={Opportunity__c} name="Opportunity__c" onchange={opportunityhandlechange}>
+                                    </lightning-input-field>
+                                </lightning-layout-item>
+                              </lightning-record-edit-form>  
+                            </div>
+
+                           <div class="slds-form-element slds-size_4-of-12"  style="margin-bottom:-16px;margin-top:-16px">
+
+                               <lightning-record-edit-form object-api-name="Minutes_of_Meeting__c">
+                                 <lightning-layout-item size="12" small-device-size="4"  
+                                padding="around-small">
+                                   <lightning-input-field field-name="Lead__c" data-type="input-field" value={Lead__c} name="Lead__c" onchange={leadhandlechange}>
+                                    </lightning-input-field>
+                                </lightning-layout-item>
+                              </lightning-record-edit-form>  
+                            </div>
+
+                            <div class="slds-form-element slds-size_4-of-12" style="margin-bottom:-16px;margin-top:-16px">
+
+                               <lightning-record-edit-form object-api-name="Minutes_of_Meeting__c">
+                                <lightning-layout-item size="12" small-device-size="4"  
+                                padding="around-small">
+                                   <lightning-input-field field-name="Project__c" data-type="input-field" value={Project__c} name="Project__c" onchange={projecthandlechange}>
+                                    </lightning-input-field>
+                                </lightning-layout-item>
+                              </lightning-record-edit-form>  
+                            </div>
+
+                             <div class="slds-form-element slds-size_4-of-12" style="margin-bottom:-16px;margin-top:-16px"> 
+
+                               <lightning-record-edit-form object-api-name="Minutes_of_Meeting__c">
+                                <lightning-layout-item size="12" small-device-size="4"   
+                                padding="around-small">
+                                   <lightning-input-field field-name="User__c" data-type="input-field" value={User__c} name="User__c" onchange={userhandlechange}>
+                                    </lightning-input-field>
+                                </lightning-layout-item>
+                              </lightning-record-edit-form>  
+                            </div>
+ 
+                        </lightning-layout> 
+                      
+       <lightning-card icon-name="standard:product" title="Minutes of Meeting Product Description">  
+       <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+        <thead>
+        <tr class="slds-text-title-caps">
+        <th>S.No</th>
+        <th>Product Name</th>
+        <th>Description</th>
+        <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <template for:each={productRecList} for:item="MinutesofMeeting" for:index="index">
+        <tr key={keyIndex}>
+        <td>{index}</td>
+        <td>
+            <lightning-record-edit-form object-api-name="Minutes_of_Metting_Description__c">
+                <lightning-input-field field-name="Product__c" data-type="input-field" access-key={index} id={index} value={MinutesofMeeting.Product__c} name="Product__c" onchange={productHandler} required>
+                 </lightning-input-field>
+           </lightning-record-edit-form>
+       
+        </td>
+        
+        <td>
+  <lightning-record-edit-form object-api-name="Minutes_of_Metting_Description__c">
+         <lightning-input-field field-name="Description__c" data-type="input-field" access-key={index} id={index} value={MinutesofMeeting.Description__c} name="Description__c" onchange={productHandler} required>
+                 </lightning-input-field>
+                 </lightning-record-edit-form>
+        </td>
+        <td>
+        <lightning-icon icon-name="action:delete" access-key={index} id={index}
+        alternative-text="Click to Call" size="small" title="large size"
+        onclick={removeRow}></lightning-icon>
+        </td>
+        </tr>
+        </template>
+        </tbody>
+        </table>
+        </lightning-card>
+            </lightning-card>
+                </div>
+                <!-- Modal/Popup Box LWC footer starts here -->
+                <footer class="slds-modal__footer">
+                    <div class="slds-grid slds-grid_align-center">
+
+                    <lightning-button  label="Cancel" onclick={handleCancel} name="submit"  class="slds-m-left_x-small"></lightning-button>
+                    <!-- <lightning-button  label="Save &amp; New"  name="submit" onclick={savebutton} class="slds-m-left_x-small"></lightning-button> -->
+                    <lightning-button variant="brand" label="Save"  name="submit" title="Primary action" onclick={savebutton} class="slds-m-left_x-small"></lightning-button>
+               
+                    <lightning-button variant="brand" style="margin-right: 20px;"  onclick={addRow} name="Add Row" label="+ Add Row" class="slds-m-left_x-small slds-text-align_left">
+                        </lightning-button>
+                    </div>
+                </footer>
+          
+            </div>
+        </section>
+       </form>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+</template>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Closed by BD</fullName>
+                <default>false</default>
+                <label>Closed by BD</label>
+            </value>
+            <value>
+                <fullName>Closed by TS</fullName>
+                <default>false</default>
+                <label>Closed by TS</label>
+            </value>
+            <value>
+                <fullName>Closed by BD System</fullName>
+                <default>false</default>
+                <label>Closed by BD System</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

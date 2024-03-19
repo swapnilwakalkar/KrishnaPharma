@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Costing</fullName>
+                <default>false</default>
+                <label>Costing</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Research And Development</fullName>
+                <default>false</default>
+                <label>Research And Development</label>
+            </value>
+            <value>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+                <label>Project Management</label>
+            </value>
+            <value>
+                <fullName>Business Development</fullName>
+                <default>false</default>
+                <label>Business Development</label>
+            </value>
+            <value>
+                <fullName>SCM</fullName>
+                <default>false</default>
+                <label>SCM</label>
+            </value>
+            <value>
+                <fullName>6 Month Stability Data</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>6 Month Stability Data</label>
+            </value>
+            <value>
+                <fullName>Analytical Method Transfer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Analytical Method Transfer</label>
+            </value>
+            <value>
+                <fullName>Commercial Dispatches</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Commercial Dispatches</label>
+            </value>
+            <value>
+                <fullName>Dossier Compilation</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Dossier Compilation</label>
+            </value>
+            <value>
+                <fullName>MAH Approval</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MAH Approval</label>
+            </value>
+            <value>
+                <fullName>Optimization Batch Manufacturing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Optimization Batch Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Optimization Report Signing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Optimization Report Signing</label>
+            </value>
+            <value>
+                <fullName>Validation Batch Manufacturing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Validation Batch Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Validation Report Signing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Validation Report Signing</label>
+            </value>
+            <value>
+                <fullName>Vendor Qualification</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Vendor Qualification</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

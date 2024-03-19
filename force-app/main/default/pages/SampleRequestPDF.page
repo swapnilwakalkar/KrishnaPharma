@@ -1,0 +1,194 @@
+<apex:page standardController="Sample_Request__c" extensions="SampleRequestPDFController" renderAs="pdf">
+    
+    
+    <div  style="text-align:right;">
+        <apex:image url="{!$Resource.samplelogo}" alt="Image Alt Text" width="100" height="70%"  />
+    </div>
+    
+    <center><b>SAMPLE REQUISITION FORM</b></center><br/>
+    
+     
+    <table width="100%">
+        <apex:repeat var="sample" value="{!sam}">
+            <tr>
+                <td style="text-align:left;">SI.NO:{!sample.Sample_Sr_No__c}</td>
+                <td >
+                    <span style="margin-left:427px;">Date:
+                    <apex:outputText value="{0,date,long}">
+                        <apex:param value="{!sample.CreatedDate}" /> 
+                    </apex:outputText>
+                    </span>
+                </td>
+            </tr>
+            
+        </apex:repeat>
+    </table>
+    
+    <table width="100%">
+        
+        <tr>
+            <td > To:<br/>
+                The Manager<br/>
+                Quality Assurance Department
+            </td>
+            <td  >
+               <span style="margin-left:350px;"> From:</span><br/> 
+                <span style="margin-left:350px;"> Marketing Department </span>  
+            </td>
+                 
+        </tr><br/>
+        <tr>
+            
+            <td>
+                Dear sir,<br/>
+                Please arrange for the sample with related documents as per the details given below.
+            </td>
+        </tr><br/>
+    </table> 
+    
+    <table border="1" cellspacing="0" cellpadding="4" width="100%" >
+        <apex:repeat var="sample" value="{!sam}">
+            
+            <tr >
+                <td style="text-align:right;" ><b>1.</b></td>
+                <td ><b style="margin-left:35px">CUSTOMER NAME</b></td>
+                <td style="text-align:right;" ><b>:</b></td>
+                <td style="text-align:center;"><apex:outputText value="{!sample.Name}"/></td>
+                
+            </tr>
+            
+            <tr >
+                <td style="text-align:right;" ><b>2.</b></td>
+                <td><b style="margin-left:35px">PRODUCT(S) REQUIRED</b></td>
+                <td style="text-align:right;" ><b>:</b></td>
+                <td style="text-align:center;"><apex:outputText value="{!Sample.Product_Name__r.Name}"/></td>
+                
+            </tr>
+            
+            <tr >
+                <td style="text-align:right;" ><b>3.</b></td>
+                <td ><b style="margin-left:35px">SAMPLES</b></td>
+                <td style="text-align:right;" ><b>:</b></td>
+                <td style="text-align:center;"><apex:outputText value="{!Sample.Samples__c}"/></td>
+                
+            </tr>
+            <tr >
+                <td style="text-align:right;" ><b>4.</b></td>
+                <td ><b style="margin-left:35px">SAMPLES QUANTITY REQUIRED</b></td>
+                <td style="text-align:right;" ><b>:</b></td>
+                <td style="text-align:center;"><apex:outputText value="{!Sample.Quantity__c}"/></td>
+                
+            </tr>
+            
+            <tr >
+                <td style="text-align:right;" ><b>5.</b></td>
+                <td><b style="margin-left:35px">CUSTOMER SPECIFICATIONS ENCLOSED/ADDITIONAL REQUIREMENTS IF ANY</b></td>
+                <td style="text-align:right;" ><b>:</b></td>
+                <td style="text-align:center;"><apex:outputText value="{!Sample.Customer_Specifications_Enclosed__c}"/></td>
+                
+            </tr>
+            
+            <tr >
+                <td style="text-align:right;" ><b>6.</b></td>
+                <td><b style="margin-left:35px">PACKAGING REQUIREMENT</b></td>
+                <td style="text-align:right;" ><b>:</b></td>
+                <td style="text-align:center;"><apex:outputText value="{!Sample.Packaging_Requirement__c}"/></td>
+                
+            </tr>
+            
+            <tr >
+                <td style="text-align:right;" ><b>7.</b></td>
+                <td><b style="margin-left:35px">SUPPORTING DOCUMENTS REQUIRED</b></td>
+                <td style="text-align:right;" ><b>:</b></td>
+                <td style="text-align:center;"><apex:outputText value="{!Sample.Supporting_Documents_Required__c}"/></td>
+                
+            </tr>
+            
+            <tr >
+                <td style="text-align:right;" width='5%'><b>8.</b></td>
+                <td><b style="margin-left:35px" width='65%'>SAMPLE REQUIRED BY</b></td>
+                <td style="text-align:right;" width='5%'><b>:</b></td>
+                <td style="text-align:center;" width='25%'><apex:outputText value="{!Sample.Owner.Name}"/></td>
+                
+            </tr>
+            
+            <tr >
+                <td style="text-align:right;" ><b>9.</b></td>
+                <td><b style="margin-left:35px">CUSTOMER/AGENT REQUEST LETTER ENCLOSED</b></td>
+                <td style="text-align:right;" ><b>:</b></td>
+                <td style="text-align:center;"><apex:outputText value="{!Sample.Customer_Agent_Request_Letter_Enclosed__c}"/></td>
+                
+            </tr><br/>
+            
+            <table width="100%">
+                
+                <tr>
+                    <td style="text-align:left;"> Request Initiated By:<br/>
+                        Date:<apex:outputText value="{0,date,long}">
+                        <apex:param value="{!sample.CreatedDate}" /> 
+                        </apex:outputText>
+                    </td>
+                    
+                    <td >
+                   <span style="margin-left:350px;">Head Marketing/Designee:</span><br/> 
+                       <span style="margin-left:350px;"> Date:<apex:outputText value="{0,date,long}">
+                        <apex:param value="{!sample.CreatedDate}" /> 
+                        </apex:outputText>
+                        </span>
+                    </td>
+                </tr><br/>
+                
+                <td style="font-size: 14px;">
+                    Request Received by:<br/>
+                    DISPATCH PARTICULARS (FOR MARKETING DEPARTMENT USE ONLY)<br/>
+                    1. SAMPLE RECEIPT DATE   <span style="margin-left:13.8px;">:</span><span style="margin-left:2px;"><apex:outputText value="{0,date,long}"><apex:param value="{!sample.CreatedDate}" /></apex:outputText></span><br/>
+                    2. SAMPLE SENT TO      <span style="margin-left:54.8px;">:</span><span style="margin-left:2px;">{!sample.Name}</span><br/>
+                    3. Batch No.             <span style="margin-left:114px;">:</span><span style="margin-left:2px;">{!sample.Batch_No__c}</span><br/>
+                    4. ENCLOSURES ATTACHED   <span style="margin-left:2px;">:</span><span style="margin-left:2px;">Document</span><br/>
+                    5. SAMPLE DISPATHCED ON  <span style="margin-left:2px;">:</span><span style="margin-left:2px;"><apex:outputText value="{0,date,long}"><apex:param value="{!sample.Dispatch_Date__c}" /></apex:outputText></span><br/>
+                </td>
+                
+                <tr>
+                <td >
+                    <span style="margin-left:450px;">Head-Marketing/Designee</span><br/>
+                   <span style="margin-left:450px;">Date:<apex:outputText value="{0,date,long}">
+                        <apex:param value="{!sample.CreatedDate}" /> 
+                        </apex:outputText>
+                    </span>
+                    </td>
+                </tr>
+            </table><br/><br/>
+            
+            <table width="100%">
+                
+                <tr>
+                    <td style="text-align:left;font-size: 10px">
+                        <b> Prepared By</b><span style="margin-left:2px;"><b>:</b></span><span style="margin-left:2px;"><b>{!Sample.Owner.Name}</b></span><br/>
+                        <b>Date/Time</b><span style="margin-left:11px;"><b>:</b></span><span style="margin-left:2px;"><b><apex:outputText value="{0,date,long}">
+                        <apex:param value="{!sample.CreatedDate}" /> 
+                            </apex:outputText></b></span><br/>
+                        <b> Designation</b> <span style="margin-left:2.9px;"><b>:</b></span><span style="margin-left:2px;"><b>Dy.Manager-Marketing</b></span><br/>
+                        <b>QMS/1.2/N Radha Reddy/{!sample.CreatedDate}</b>
+                    </td>
+                    
+                    <td style="font-size:10px"><b>Reviewed By</b><span style="margin-left:2px;"><b>:</b></span><span style="margin-left:2px;"><b>G V Satish</b></span><br/>
+                        <b>Date/Time</b><span style="margin-left:12.7px;"><b>:</b></span> <span style="margin-left:1px;"><b><apex:outputText value="{0,date,long}">
+                        <apex:param value="{!sample.CreatedDate}" /> 
+                        </apex:outputText></b></span><br/>
+                        <b> Designation</b> <span style="margin-left:5px;"><b>:</b></span><span style="margin-left:3px;"><b>Sr.Manager-Marketing</b></span><br/>
+                    </td>
+                    
+                    
+                    <td style="font-size: 10px;"><b>Approved By</b> <span style="margin-left:-1px;"><b>:</b></span><span style="margin-left:2px;"><b>Bala Krishna N</b></span><br/>
+                        <b>Date/Time</b><span style="margin-left:14px;"><b>:</b></span><span style="margin-left:2px;"><b><apex:outputText value="{0,date,long}">
+                        <apex:param value="{!sample.CreatedDate}" /> 
+                        </apex:outputText></b></span><br/>
+                        <b>Designation</b><span style="margin-left:8.7px;"><b>:</b></span><span style="margin-left:2px;"><b>Dy.Manager-QA
+                            </b></span></td>
+                    
+                </tr>
+            </table> 
+        </apex:repeat>
+    </table>
+    
+</apex:page>

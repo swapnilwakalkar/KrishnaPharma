@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Samples__c</fullName>
+    <externalId>false</externalId>
+    <label>Samples</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Market Sample</fullName>
+                <default>false</default>
+                <label>Market Sample</label>
+            </value>
+            <value>
+                <fullName>Working Standard Sample</fullName>
+                <default>false</default>
+                <label>Working Standard Sample</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>
